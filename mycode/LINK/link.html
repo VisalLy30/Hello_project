@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+
+    <body>
+        <h2>Display videos with 1minut</h2>
+        <button onclick="opennext();">click</button><br>
+        <iframe id="the_frame" width="500px" height="500px"></iframe>
+        <script>
+            var urls = [
+                'https://www.youtube.com/embed/TsWZjYZfn1w',
+                'https://www.youtube.com/embed/eqauDWlhDi0'
+
+            ];
+            var seconds = 30;
+
+            function opennext() {
+                document.getElementById('the_frame').src = urls.shift();
+                if (urls.length) setTimeout('opennext()', 20 * 10000);
+            }
+        </script>
+    </body>
+
+    </html>
+</body>
+
+</html>

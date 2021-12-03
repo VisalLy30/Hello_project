@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form action="" onsubmit="return checkForm(this);">
+        <fieldset>
+            <legend>
+                Event Detail
+            </legend>
+            <label for="">Start Date <br>
+                <input type="text" size="12" placeholder="dd/mm/yyyy" name="startDate">
+            </label> <br>
+            <label for="">Start Time <br>
+                <input type="text" size="12" pattern="\d{1,2}:\d{2}{[ap]m}?" name="startTime">
+            </label> <br> <br><br>
+            <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <script>
+        function checkForm(form) {
+
+            re = /^\d{1,2}\/\d{1,2}\/\d{4}$/;
+            if (form.startDate.value != '' && !form.startDate.match(re)) {
+                alert(" Invalid Date " + form.startDate.value);
+                form.startDate.focus();
+                return false;
+            } else {
+                alert("bhdvshbvfbbfvjf");
+            }
+
+            rec = /^\d{1,2}:\d{2}([ap]m)?$/;
+            if (form.startTime.value != '' && !form.startTime.match(rec)) {
+                alert(" Invalid Date " + form.startTime.value);
+                form.startTime.focus();
+                return false;
+            }
+            alert("All Input Field is validate ");
+            return true;
+
+        }
+    </script>
+</body>
+
+</html>

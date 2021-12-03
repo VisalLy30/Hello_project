@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Compare javascript Date
+    </h2>
+    <hr>
+    <p id="demo"></p>
+    <script>
+        var date1 = new Date("July 19,2021");
+        var date2 = new Date("July 28,2021");
+
+        if (date1 > date2) {
+            document.getElementById("demo").innerHTML = date2 + " are first date is more recent";
+        } else {
+            document.getElementById("demo").innerHTML = date1 + " are second date is more recent";
+        }
+    </script>
+</body>
+
+</html>
